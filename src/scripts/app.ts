@@ -1,7 +1,5 @@
 const init = () => {
-    console.log('init');
-}
+  console.log("init");
+};
 
-export {
-    init
-}
+export { init };
