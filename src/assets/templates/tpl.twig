@@ -1,3 +1,4 @@
+<div class="wrapper">
 <div class="top">
   <div class="top__wrapper container">
     <button class="city-selector" type="button">
@@ -82,6 +83,7 @@
     </div>
   </section>
 
+  <div class="section">
   <div class="promo">
     <div class="promo__nav">
       <button class="promo__nav-btn" type="button">Производство</button>
@@ -107,6 +109,7 @@
       </div>
     </div>
   </div>
+  </div>
 
 {% set hardware = [
   'Жидкостные хроматографы собственной сборки компании Лабконцепт',
@@ -118,6 +121,7 @@
   'Роторные испарители, системы для концентрирования и твердофазной экстракции, системы термического нагрева, рециркуляционные системы охлаждения',
   'Посудомоечные машины',
 ] %}
+  <div class="section">
   <div class="hardware">
     {% for item in hardware %}
     <div class="hardware__item">
@@ -125,14 +129,17 @@
     </div>
     {% endfor %}
   </div>
+  </div>
 
 {% set features = ['Быстрые сроки поставки за счет наличия товара на складе в Санкт-Петербурге.', 'Апробация оборудования для клиентов. Уникальная возможность опробовать прибор в рамках собственной лаборатории.', 'Проведение мастер-классов, вебинаров, семинаров, участие в конференциях и выставках.'] %}
+  <div class="section">
   <div class="features">
     {% for item in features %}
     <div class="features__item">
       <div class="features__item-title">{{ item }}</div>
     </div>
     {% endfor %}
+  </div>
   </div>
 
 {% set about = [{
@@ -149,6 +156,7 @@
   text: "Из них 5 кандидатов химических и технических наук"
   },
 ] %}
+  <div class="section">
   <div class="company">
     {% for item in about %}
     <div class="company__item">
@@ -157,10 +165,12 @@
     </div>
     {% endfor %}
   </div>
+  </div>
 
-  <div class="content content_fs_xl content_type_blockquote">
+  <div class="section content content_fs_xl content_type_blockquote">
     <p>Мы продаем вам не приборы — мы продаем решения ваших задач, включающие в себя процессы от подбора необходимого оборудования и постановки (переноса) методики — до последнего дня эксплуатации каждого прибора с сопровождением последующей его продажи или утилизации.</p>
   </div>
+</div>
 </div>
 
 {% set captions = ['О компании', 'Отзывы', 'Партнеры', 'Новости', 'Мероприятия', 'Контакты'] %}
@@ -185,10 +195,10 @@
   city: "Владивосток"
 }] %}
 <footer class="footer">
-	<div class="container">
-		<div class="footer__wrapper">
+	<div class="footer__wrapper container">
+		<div class="footer__aside">
 			<a class="footer__logo" href="/">
-				<!-- <img src="" alt="" /> -->
+				<img src="src/assets/img/logo-white.png" alt=""/>
 				Продуманные решения<br/>
 				для аналитических лабораторий
 			</a>
@@ -205,17 +215,22 @@
 			</nav>
 		</div>
 		<div class="footer__contacts">
-      <a class="footer__contacts-phone" href="tel:+78123273700">+7 (812) 327-37-00</a>
-			<a class="footer__link" href="#">Заказать обратный звонок</a>
+      <div class="footer__contacts-wrapper">
+        <a class="footer__contacts-phone" href="tel:+78123273700">+7 (812) 327-37-00</a>
+        <a class="footer__link" href="#">Заказать обратный звонок</a>
+      </div>
 
-      <a class="footer__contacts-link" href="mailto:lc@labconcept.ru">lc@labconcept.ru</a>
-      <div class="footer__contacts-text">Режим работы: ПН - ПТ, 9:30 - 18:00</div>
+      <div class="footer__contacts-wrapper">
+        <a class="footer__contacts-link" href="mailto:lc@labconcept.ru">lc@labconcept.ru</a>
+        <div class="footer__contacts-text">Режим работы: ПН - ПТ, 9:30 - 18:00</div>
+      </div>
 
-      <div class="footer__contacts-text">Санкт-Петербург, В.О., 26-я линия, д. 15, корп. 2, литера А, офис 9.08</div>
+      <div class="footer__contacts-text">Санкт-Петербург, В.О.,<br />26-я линия, д. 15, корп. 2, литера А, офис 9.08</div>
+
       <ul class="footer__contacts-list">
       {% for item in phones %}
         <li class="footer__contacts-text">
-          <a class="footer__nav-link footer__nav-link_type_plain" href="#">{{ item.phone }}</a> - {{ item.city }}
+          <a class="footer__nav-link footer__nav-link_fs_sm" href="#">{{ item.phone }}</a> - {{ item.city }}
         </li>
       {% endfor %}
       </ul>
@@ -223,7 +238,7 @@
 		<div class="footer__disclaimer">Справочно-информационные и аналитические материалы, в частности, информация о товарах и услугах, размещённые на настоящем сайте, не является рекламой согласно Федеральному закону "О рекламе" от 13.03.2006 № 38-ФЗ.</div>
 	</div>
 	<div class="footer__bottom">
-		<div class="container">
+		<div class="footer__bottom-wrapper container">
 			<div class="footer__copyright">ООО «Лабконцепт», 2021-2026</div>
 			<a class="footer__link" href="#">Политика обработки персональных данных</a>
 		</div>

@@ -1,5 +1,10 @@
 @use "../utils/helpers" as *;
 
+#app {
+  @extend %d-flex-column;
+  min-height: 100vh;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -11,10 +16,16 @@ html {
 }
 
 body {
+  @extend %d-flex-column;
   @include fs-lh(var(--font-size-body),1);
   font-family: var(--font-family-body), sans-serif;
   color: var(--color-basic);
+  min-height: 100vh;
   background-color: var(--color-neutral);
+}
+
+.wrapper {
+  flex-grow: 1;
 }
 
 .container {
