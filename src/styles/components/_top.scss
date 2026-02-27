@@ -10,7 +10,7 @@
   justify-content: space-between;
   gap: 0 35px;
 
-  @media #{$breakpoint-up-xsm} {
+  @media #{$breakpoint-up-xs} {
     justify-content: flex-end;
   }
 }

@@ -84,12 +84,12 @@
 }
 
 .header__contacts-phone {
-  @include fs-lh(var(--font-size-md),19px);
+  @include fs-lh(var(--font-size-lg),19px);
   font-weight: var(--fw-bold);
 }
 
 .header__contacts-link {
-  @include fs-lh(var(--font-size-sm),11px);
+  @include fs-lh(var(--font-size-xs),11px);
   font-weight: var(--fw-medium);
   color: var(--color-primary);
 }

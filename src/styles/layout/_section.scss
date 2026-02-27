@@ -1,0 +1,9 @@
+@use "../utils/helpers" as *;
+
+.section {
+  @include py(40px);
+
+  @media #{$breakpoint-up-md} {
+    @include py(100px);
+  }
+}

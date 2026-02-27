@@ -1,0 +1,9 @@
+@use "../utils/helpers" as *;
+
+.intro {
+  padding-top: 32px;
+
+  @media #{$breakpoint-up-sm} {
+    padding-top: 64px;
+  }
+}

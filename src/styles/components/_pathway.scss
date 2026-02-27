@@ -1,0 +1,21 @@
+@use "../utils/helpers" as *;
+
+.pathway {
+  @extend %d-flex-ai-center;
+  @include fs-lh(var(--font-size-sm),1.3);
+  gap: 8px;
+
+  @media #{$breakpoint-up-sm} {
+    font-size: var(--font-size-lg);
+  }
+}
+
+.pathway__item {
+  @extend %d-flex-ai-center;
+  gap: 8px;
+  color: var(--color-primary);
+
+  &.pathway__item_type_current {
+    color: var(--color-secondary);
+  }
+}

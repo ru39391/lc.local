@@ -35,7 +35,10 @@
   </header>
 
   <nav class="nav">
-    <a class="nav__item" href="#">Каталог</a>
+    <a class="nav__item nav__item_type_btn" href="#">
+      Каталог
+      <span class="nav__item-icon"><img src="src/assets/icons/arrow-down-icon.svg" alt="" /></span>
+    </a>
     <div class="nav__wrapper">
       <a class="nav__item" href="#">О компании</a>
       <a class="nav__item" href="#">Производство</a>
@@ -46,30 +49,38 @@
       <a class="nav__item" href="#">События</a>
       <a class="nav__item" href="#">Контакты</a>
     </div>
-    <button class="nav__btn js-search-toggler" type="button"></button>
-    <button class="nav__btn js-nav-toggler" type="button"></button>
+    <div class="nav__aside">
+      <button class="nav__btn js-search-toggler" type="button"><img src="src/assets/icons/search-icon.svg" alt="" /></button>
+      <button class="nav__btn js-nav-toggler" type="button">
+        <span class="nav__btn-icon nav__btn-icon_type_open"><img src="src/assets/icons/nav-icon.svg" alt="" /></span>
+        <span class="nav__btn-icon nav__btn-icon_type_close"><img src="src/assets/icons/close-icon.svg" alt="" /></span>
+      </button>
+    </div>
   </nav>
 
-  <div class="pathway">
-    <a class="pathway__item" href="/">Главная</a>
-    <span class="pathway__item pathway__item_type_current">О компании</span>
-  </div>
-
   <section class="intro">
-    <div class="content content_type_col">
+    <div class="pathway">
+      <a class="pathway__item" href="/">
+        Главная
+        <img src="src/assets/icons/arrow-left-icon.svg" alt="" />
+      </a>
+      <span class="pathway__item pathway__item_type_current">О компании</span>
+    </div>
+
+    <div class="section content content_type_col content_fs_md">
       <h1>О группе компаний «Лабконцепт»</h1>
       <p>Группа компаний «Лабконцепт» – крупнейший отечественный производитель и поставщик аппаратных, программных и методических решений для аналитических лабораторий любого масштаба и профиля.</p>
     </div>
-  </section>
 
-  <div class="section">
-    <div class="content content_fs_xl">
-      <p>Нами охвачен весь цикл оснащения лаборатории: от подбора оборудования, его производства, пусконаладки и обучения сотрудников заказчика, до постгарантийного обслуживания.</p>
+    <div class="section">
+      <div class="content content_fs_xl">
+        <p>Нами охвачен весь цикл оснащения лаборатории: от подбора оборудования, его производства, пусконаладки и обучения сотрудников заказчика, до постгарантийного обслуживания.</p>
+      </div>
+      <div class="content content_type_col">
+        <p>Более чем тридцатилетний опыт и высокие компетенции коллектива, насчитывающего свыше 170 человек, гарантируют ответственный и профессиональный подход к реализации задач различной направленности.</p>
+      </div>
     </div>
-    <div class="content content_type_col">
-      <p>Более чем тридцатилетний опыт и высокие компетенции коллектива, насчитывающего свыше 170 человек, гарантируют ответственный и профессиональный подход к реализации задач различной направленности.</p>
-    </div>
-  </div>
+  </section>
 
   <div class="promo">
     <div class="promo__nav">
