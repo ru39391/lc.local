@@ -1,0 +1,95 @@
+@use "../utils/helpers" as *;
+
+.header {
+  @extend %d-flex-wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px 5px;
+  padding: 20px 0 30px;
+
+  @media #{$breakpoint-up-md} {
+    gap: 0 24px;
+    padding: 26px 0 32px;
+    flex-wrap: nowrap;
+  }
+
+  @media #{$breakpoint-up-lg} {
+    gap: 0 30px;
+    display: grid;
+    grid-template-columns: auto 1fr minmax(auto,415px);
+  }
+}
+
+.header__logo {
+  order: 1;
+}
+
+.header__wrapper {
+  @extend %d-flex-ai-center;
+  @include fw(100%);
+  flex-direction: column;
+  gap: 24px;
+  order: 3;
+
+  @media #{$breakpoint-up-md} {
+    @include fw(auto);
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    order: 2;
+  }
+}
+
+.header__aside {
+  @extend %d-flex-ai-center;
+  order: 2;
+
+  @media #{$breakpoint-up-md} {
+    justify-content: space-between;
+    gap: 0 24px;
+    order: 3;
+  }
+}
+
+.header__desc {
+  @include fs-lh(11px,1.18);
+  text-align: center;
+  font-weight: var(--fw-medium);
+  color: var(--color-secondary);
+
+  @media #{$breakpoint-up-md} {
+    max-width: 190px;
+    text-align: left;
+  }
+}
+
+.header__desc-footer {
+  @media #{$breakpoint-up-md} {
+    display: block;
+  }
+}
+
+.header__btn {
+  display: none;
+
+  @media #{$breakpoint-up-md} {
+    display: flex;
+  }
+}
+
+.header__contacts {
+  @extend %d-flex-column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.header__contacts-phone {
+  @include fs-lh(var(--font-size-md),19px);
+  font-weight: var(--fw-bold);
+}
+
+.header__contacts-link {
+  @include fs-lh(var(--font-size-sm),11px);
+  font-weight: var(--fw-medium);
+  color: var(--color-primary);
+}

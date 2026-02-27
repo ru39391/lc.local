@@ -1,3 +1,12 @@
 @use 'base/reset';
 @use 'base/fonts';
 @use 'base/typography';
+@use 'layout/container';
+@use 'layout/section';
+@use 'layout/header';
+@use 'layout/footer';
+@use 'components/btn';
+@use 'components/top';
+@use 'components/cities';
+@use 'components/langs';
+@use 'components/search';

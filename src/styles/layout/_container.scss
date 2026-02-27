@@ -1,0 +1,24 @@
+@use "../utils/helpers" as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  @include fs-lh(var(--font-size-body),1);
+  font-family: var(--font-family-body), sans-serif;
+  color: var(--color-basic);
+  background-color: var(--color-neutral);
+}
+
+.container {
+  @include px(16px);
+  @include mx(auto);
+  max-width: 1432px;
+}

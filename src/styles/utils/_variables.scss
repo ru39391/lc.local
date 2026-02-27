@@ -1,7 +1,18 @@
 :root {
   --font-family-body: 'GothamPro';
 
+  --font-size-md: 20px;
+  --font-size-body: 16px;
+  --font-size-sm: 12px;
+
+  --fw-medium: 500;
+  --fw-bold: 700;
+
   --color-white: #ffffff;
   --color-neutral: #fbfbfb;
+  --color-light: #c8c8c8;
+  --color-secondary: #969696;
   --color-basic: #292929;
+  --color-primary: #FEB516;
+  --color-transp: rgba(0,0,0,0);
 }

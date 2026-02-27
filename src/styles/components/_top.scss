@@ -1,0 +1,16 @@
+@use "../utils/helpers" as *;
+
+.top {
+  @include py(10px);
+  background-color: var(--color-white);
+}
+
+.top__wrapper {
+  @extend %d-flex-ai-center;
+  justify-content: space-between;
+  gap: 0 35px;
+
+  @media #{$breakpoint-up-xsm} {
+    justify-content: flex-end;
+  }
+}

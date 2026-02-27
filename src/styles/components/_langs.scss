@@ -1,0 +1,17 @@
+@use "../utils/helpers" as *;
+
+.lang-list {
+  @extend %d-flex-ai-center;
+  transform: translate(0,25%);
+}
+
+.lang-list__btn {
+  @include border(0 0 1px,var(--color-transp));
+  padding: 0 3px 10px;
+  font-size: 11px;
+
+  &.is-active {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+}

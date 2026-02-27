@@ -1,6 +1,10 @@
 <div class="top">
   <div class="top__wrapper container">
-    <button class="city-selector" type="button">Санкт-Петербург</button>
+    <button class="city-selector" type="button">
+      <img src="src/assets/icons/placemark-icon.svg" alt="" />
+      Санкт-Петербург
+      <img src="src/assets/icons/arrow-down-icon.svg" alt="" />
+    </button>
     <div class="lang-list">
       <button class="lang-list__btn is-active" type="button">RU</button>
       <button class="lang-list__btn" type="button">EN</button>
@@ -10,20 +14,23 @@
 
 <div class="container">
   <header class="header">
-    <div class="header__aside">
-      <a class="logo" href="/"></a>
-      <div class="header__desc">Продуманные решения для аналитических лабораторий</div>
-    </div>
-    <div class="header__wrapper js-search-holder">
-      <form class="search-form">
-        <button class="search-form__btn" type="submit"></button>
+    <a class="header__logo" href="/"><img src="src/assets/img/logo.png" alt=""/></a>
+    <div class="header__wrapper">
+      <div class="header__desc">Продуманные решения <span class="header__desc-footer">для аналитических лабораторий</span></div>
+      <form class="search-form js-search-form">
+        <button class="search-form__btn" type="submit"><img src="src/assets/icons/search-icon.svg" alt="" /></button>
         <input class="search-form__field" type="text" placeholder="Поиск на сайте" />
       </form>
-      <button class="btn btn-icon" type="button">Скачать каталог</button>
     </div>
-    <div class="header__contacts">
-      <a class="header__contacts-phone" href="tel:+78123273700">+7 (812) 327-37-00</a>
-      <button class="header__contacts-link" type="button">Заказать обратный звонок</button>
+    <div class="header__aside">
+      <button class="header__btn btn btn-icon" type="button">
+        <img src="src/assets/icons/pdf-icon.svg" alt="" />
+        Скачать каталог
+      </button>
+      <div class="header__contacts">
+        <a class="header__contacts-phone" href="tel:+78123273700">+7 (812) 327-37-00</a>
+        <button class="header__contacts-link" type="button">Заказать обратный звонок</button>
+      </div>
     </div>
   </header>
 

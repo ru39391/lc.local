@@ -1,0 +1,8 @@
+@use "../utils/helpers" as *;
+
+.city-selector {
+  @extend %d-flex-ai-center;
+  gap: 0 8px;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}

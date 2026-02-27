@@ -1,0 +1,17 @@
+@use "../utils/helpers" as *;
+
+.btn {
+  @extend %d-flex-centered;
+  @include fs-lh(13px,12px);
+  min-width: 178px;
+  min-height: 54px;
+  padding: 12px 18px;
+  font-weight: var(--fw-bold);
+  border-radius: 12px;
+  background-color: var(--color-primary);
+}
+
+.btn-icon {
+  @extend %d-flex-ai-center;
+  gap: 0 10px;
+}

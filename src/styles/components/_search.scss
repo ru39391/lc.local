@@ -1,0 +1,26 @@
+@use "../utils/helpers" as *;
+
+.search-form {
+  @include wh(100%,54px);
+  padding: 0 0 0 16px;
+  border-radius: 54px;
+  display: none;
+  background-color: var(--color-white);
+
+  @media #{$breakpoint-up-md} {
+    max-width: 452px;
+    display: flex;
+  }
+
+  &.is-visible {
+    display: flex;
+  }
+}
+
+.search-form__field {
+  @include wh(100%);
+  @include fs-lh(13px,12px);
+  padding: 0 0 0 10px;
+  font-weight: var(--fw-bold);
+  color: var(--color-secondary);
+}
