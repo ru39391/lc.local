@@ -9,7 +9,13 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@types/twig": "^1.12.17",
+    "sass": "^1.97.3",
     "typescript": "~5.9.3",
     "vite": "^7.3.1"
+  },
+  "dependencies": {
+    "swiper": "^12.1.2",
+    "twig": "^1.17.1"
   }
 }
