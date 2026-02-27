@@ -1,0 +1,17 @@
+@use './mixins' as *;
+
+body {
+  @include fs-lh(15px,18px);
+  font-family: var(--font-family-body), sans-serif;
+  color: var(--color-basic);
+  background-color: var(--color-neutral);
+}
+
+.td-underline {
+  text-decoration: underline;
+}
+
+.icon-fluid {
+  @include object-fit();
+  pointer-events: none;
+}

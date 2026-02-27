@@ -1,0 +1,35 @@
+@use 'sass:list';
+
+$lg-max-value: 1680px;
+$md-max-value: 1365px;
+$sm-max-value: 991px;
+$xsm-max-value: 767px;
+$xxsm-max-value: 575px;
+
+$xl-min-value: $lg-max-value + 1;
+$lg-min-value: $md-max-value + 1;
+$md-min-value: $sm-max-value + 1;
+$sm-min-value: $xsm-max-value + 1;
+$xsm-min-value: $xxsm-max-value + 1;
+
+$lg-range: ($lg-min-value, $lg-max-value);
+$md-range: ($md-min-value, $md-max-value);
+$sm-range: ($sm-min-value, $sm-max-value);
+$xsm-range: ($xsm-min-value, $xsm-max-value);
+
+$breakpoint-up-xl: "(min-width: #{$xl-min-value})";
+$breakpoint-up-lg: "(min-width: #{$lg-min-value})";
+$breakpoint-up-md: "(min-width: #{$md-min-value})";
+$breakpoint-up-sm: "(min-width: #{$sm-min-value})";
+$breakpoint-up-xsm: "(min-width: #{$xsm-min-value})";
+
+$breakpoint-down-xl: "(max-width: #{$lg-max-value})";
+$breakpoint-down-lg: "(max-width: #{$md-max-value})";
+$breakpoint-down-md: "(max-width: #{$sm-max-value})";
+$breakpoint-down-sm: "(max-width: #{$xsm-max-value})";
+$breakpoint-down-xsm: "(max-width: #{$xxsm-max-value})";
+
+$breakpoint-only-lg: "(min-width: #{list.nth($lg-range, 1)}) and (max-width: #{list.nth($lg-range, 2)})";
+$breakpoint-only-md: "(min-width: #{list.nth($md-range, 1)}) and (max-width: #{list.nth($md-range, 2)})";
+$breakpoint-only-sm: "(min-width: #{list.nth($sm-range, 1)}) and (max-width: #{list.nth($sm-range, 2)})";
+$breakpoint-only-xsm: "(min-width: #{list.nth($xsm-range, 1)}) and (max-width: #{list.nth($xsm-range, 2)})";
