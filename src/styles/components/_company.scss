@@ -1,0 +1,81 @@
+@use "../utils/helpers" as *;
+
+.company {
+  @include before;
+  overflow: hidden;
+  color: var(--color-white);
+  border-radius: 24px;
+
+  &:before {
+    @include zi(1);
+    @include pos(0);
+    @include wh(100%);
+    opacity: .2;
+    background-color: var(--color-basic);
+  }
+}
+
+.company__wrapper {
+  @extend %d-flex-column;
+  @include zi(3);
+  gap: 60px 0;
+  padding: 40px 30px;
+  justify-content: space-between;
+
+  @media #{$breakpoint-up-xs} {
+    gap: 24px 0;
+  }
+
+  @media #{$breakpoint-up-sm} {
+    padding: 60px;
+  }
+
+  @media #{$breakpoint-up-md} {
+    @include pos(0);
+    @include wh(100%);
+  }
+}
+
+.company__bg {
+  @include zi(2);
+  @include pos(0);
+  @include object-fit();
+
+  @media #{$breakpoint-up-md} {
+    position: static;
+  }
+
+  &.company__bg_type_xs {
+    display: block;
+
+    @media #{$breakpoint-up-xs} {
+      display: none;
+    }
+  }
+
+  &.company__bg_type_sm {
+    display: none;
+
+    @media #{$breakpoint-up-xs} {
+      display: block;
+    }
+  }
+}
+
+.company__item {
+  @extend %d-flex-column;
+  max-width: 335px;
+  gap: 15px 0;
+}
+
+.company__item-title {
+  @include fs-lh(var(--font-size-xl),1.2);
+
+  @media #{$breakpoint-up-sm} {
+    font-size: 30px;
+  }
+}
+
+.company__item-text {
+  @include fs-lh(var(--font-size-body),1.3);
+}

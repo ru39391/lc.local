@@ -21,6 +21,7 @@
 
   @media #{$breakpoint-up-lg} {
     row-gap: 110px;
+    padding-top: 78px;
     grid-template-columns: repeat(5,1fr);
     grid-template-areas:
       "aside aside aside contacts contacts"
@@ -55,6 +56,10 @@
   grid-area: logo;
   line-height: 1.3;
   color: var(--color-secondary);
+
+  @media #{$breakpoint-up-lg} {
+    transform: translateY(-46px);
+  }
 }
 
 .footer__nav {
@@ -62,10 +67,6 @@
   align-items: flex-start;
   grid-area: main;
   gap: 10px;
-
-  @media #{$breakpoint-up-lg} {
-    padding-top: 46px;
-  }
 
   &:last-child {
     grid-area: ext;
@@ -92,10 +93,6 @@
     text-align: right;
     align-items: flex-end;
     justify-content: flex-end;
-  }
-
-  @media #{$breakpoint-up-lg} {
-    padding-top: 46px;
   }
 }
 

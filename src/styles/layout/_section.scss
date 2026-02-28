@@ -6,4 +6,13 @@
   @media #{$breakpoint-up-md} {
     @include py(100px);
   }
+
+  &.section_type_col {
+    @extend %d-flex-column;
+    gap: 16px 0;
+
+    @media #{$breakpoint-up-md} {
+      gap: 40px 0;
+    }
+  }
 }

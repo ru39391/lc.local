@@ -68,16 +68,16 @@
       <span class="pathway__item pathway__item_type_current">О компании</span>
     </div>
 
-    <div class="section content content_type_col content_fs_md">
+    <div class="section content content_width_min content_fs_md">
       <h1>О группе компаний «Лабконцепт»</h1>
       <p>Группа компаний «Лабконцепт» – крупнейший отечественный производитель и поставщик аппаратных, программных и методических решений для аналитических лабораторий любого масштаба и профиля.</p>
     </div>
 
-    <div class="section">
+    <div class="section section_type_col">
       <div class="content content_fs_xl">
         <p>Нами охвачен весь цикл оснащения лаборатории: от подбора оборудования, его производства, пусконаладки и обучения сотрудников заказчика, до постгарантийного обслуживания.</p>
       </div>
-      <div class="content content_type_col">
+      <div class="content content_fs_md content_width_min">
         <p>Более чем тридцатилетний опыт и высокие компетенции коллектива, насчитывающего свыше 170 человек, гарантируют ответственный и профессиональный подход к реализации задач различной направленности.</p>
       </div>
     </div>
@@ -158,16 +158,20 @@
 ] %}
   <div class="section">
   <div class="company">
-    {% for item in about %}
-    <div class="company__item">
-      <div class="company__item-title">{{ item.title }}</div>
-      <div class="company__item-text">{{ item.text }}</div>
+    <img class="company__bg company__bg_type_xs" src="src/assets/img/company-mobile.png" alt="" />
+    <img class="company__bg company__bg_type_sm" src="src/assets/img/company.png" alt="" />
+    <div class="company__wrapper">
+      {% for item in about %}
+      <div class="company__item">
+        <div class="company__item-title">{{ item.title }}</div>
+        <div class="company__item-text">{{ item.text }}</div>
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
   </div>
 
-  <div class="section content content_fs_xl content_type_blockquote">
+  <div class="section content content_fs_xl content_offset_bottom content_type_blockquote">
     <p>Мы продаем вам не приборы — мы продаем решения ваших задач, включающие в себя процессы от подбора необходимого оборудования и постановки (переноса) методики — до последнего дня эксплуатации каждого прибора с сопровождением последующей его продажи или утилизации.</p>
   </div>
 </div>
