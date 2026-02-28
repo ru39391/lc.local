@@ -1,6 +1,7 @@
 @use "../utils/helpers" as *;
 
 #app {
+  // TODO: удалить
   @extend %d-flex-column;
   min-height: 100vh;
 }
