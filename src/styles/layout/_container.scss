@@ -27,6 +27,10 @@ body {
 
 .wrapper {
   flex-grow: 1;
+
+  @media #{$breakpoint-up-xs} {
+    background: url(../assets/img/intro.png) no-repeat top center scroll var(--color-transp);
+  }
 }
 
 .container {

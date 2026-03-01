@@ -16,3 +16,13 @@
     }
   }
 }
+
+.section-title {
+  @include fs-lh(var(--font-size-xl),1);
+  font-weight: var(--fw-medium);
+  margin-bottom: 32px;
+
+  @media #{$breakpoint-up-md} {
+    display: none;
+  }
+}

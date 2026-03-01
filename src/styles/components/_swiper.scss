@@ -1,0 +1,44 @@
+@use "../utils/helpers" as *;
+
+.swiper-pagination {
+  // TODO: удалить
+  @extend %d-flex-centered;
+  gap: 0 8px;
+
+  @media #{$breakpoint-up-md} {
+    gap: 0 20px;
+  }
+}
+
+.swiper-pagination-bullet {
+  @extend %d-flex-column;
+  @extend %d-flex-centered;
+  @include wh(16px);
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: var(--color-white);
+
+  @media #{$breakpoint-up-md} {
+    @include wh(40px);
+    color: #d9d9dd;
+  }
+
+  &.is-active {
+    background-color: #d9d9dd;
+
+    @media #{$breakpoint-up-md} {
+      color: var(--color-white);
+      background-color: #FED016;
+    }
+  }
+}
+
+.swiper-pagination-counter {
+  @include fs-lh(var(--font-size-md),1.3);
+  font-weight: var(--fw-medium);
+  display: none;
+
+  @media #{$breakpoint-up-md} {
+    display: block;
+  }
+}

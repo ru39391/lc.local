@@ -59,7 +59,6 @@
     </div>
   </nav>
 
-  <section class="intro">
     <div class="pathway">
       <a class="pathway__item" href="/">
         Главная
@@ -68,34 +67,37 @@
       <span class="pathway__item pathway__item_type_current">О компании</span>
     </div>
 
-    <div class="section content content_width_min content_fs_md">
-      <h1>О группе компаний «Лабконцепт»</h1>
-      <p>Группа компаний «Лабконцепт» – крупнейший отечественный производитель и поставщик аппаратных, программных и методических решений для аналитических лабораторий любого масштаба и профиля.</p>
-    </div>
+    <section class="intro">
+      <div class="section content content_width_min content_fs_lg zi-2">
+        <h1>О группе компаний «Лабконцепт»</h1>
+        <p>Группа компаний «Лабконцепт» – крупнейший отечественный производитель и поставщик аппаратных, программных и методических решений для аналитических лабораторий любого масштаба и профиля.</p>
+      </div>
 
-    <div class="section section_type_col">
-      <div class="content content_fs_xl">
-        <p>Нами охвачен весь цикл оснащения лаборатории: от подбора оборудования, его производства, пусконаладки и обучения сотрудников заказчика, до постгарантийного обслуживания.</p>
+      <div class="section section_type_col zi-2">
+        <div class="content content_fs_xl">
+          <p>Нами охвачен весь цикл оснащения лаборатории: от подбора оборудования, его производства, пусконаладки и обучения сотрудников заказчика, до постгарантийного обслуживания.</p>
+        </div>
+        <div class="content content_fs_lg content_width_min">
+          <p>Более чем тридцатилетний опыт и высокие компетенции коллектива, насчитывающего свыше 170 человек, гарантируют ответственный и профессиональный подход к реализации задач различной направленности.</p>
+        </div>
       </div>
-      <div class="content content_fs_md content_width_min">
-        <p>Более чем тридцатилетний опыт и высокие компетенции коллектива, насчитывающего свыше 170 человек, гарантируют ответственный и профессиональный подход к реализации задач различной направленности.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
   <div class="section">
   <div class="promo">
     <div class="promo__nav">
-      <button class="promo__nav-btn" type="button">Производство</button>
+      <button class="promo__nav-btn is-active" type="button">Производство</button>
       <button class="promo__nav-btn" type="button">Поставка оборудования</button>
       <button class="promo__nav-btn" type="button">Программное обеспечение</button>
       <button class="promo__nav-btn" type="button">Лаборатория и учебный центр</button>
       <button class="promo__nav-btn" type="button">Сервис и технический контроль</button>
     </div>
+    <div class="promo__panel"><div class="promo__panel-title">Поставка оборудования</div></div>
     <div class="promo__list">
-      <div class="promo__list-item">
+      <div class="promo__list-item is-active">
         <div class="promo__list-title">Производство</div>
-        <div class="promo__list-content">
+        <div class="promo__list-picture"><img class="promo__list-img" src="src/assets/img/company.png" alt="" /></div>
+        <div class="promo__list-content content">
           <p>Собственное производство лабораторных и аналитических весов I Специального и II Высокого классов точности, а также оборудования для пробоподготовки, марки Госметр.</p>
           <blockquote>В 2025 году начата локализация производства компонентов для сборки основных блоков хроматографа в РФ.</blockquote>
           <p>Узловая сборка жидкостного хроматографа LicArt 62; Разработка и производство собственных блоков для ВЭЖХ, таких как:</p>
@@ -105,7 +107,6 @@
             <li>решения для полупрепаративной хроматографии.</li>
           </ul>
         </div>
-        <div class="promo__list-pic"></div>
       </div>
     </div>
   </div>
@@ -122,25 +123,32 @@
   'Посудомоечные машины',
 ] %}
   <div class="section">
-  <div class="hardware">
-    {% for item in hardware %}
-    <div class="hardware__item">
-      <div class="hardware__item-media"><img class="hardware__item-media" src="src/assets/img/logo.png" alt=""/></div>
-      <div class="hardware__item-title">{{ item }}</div>
+    <div class="section-title">Поставляемые решение</div>
+    <div class="hardware">
+      {% for item in hardware %}
+      <div class="hardware__item">
+        <div class="hardware__item-media"><img class="hardware__item-img" src="src/assets/img/logo.png" alt=""/></div>
+        <div class="hardware__item-title">{{ item }}</div>
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
-  </div>
+    <div class="swiper-pagination">
+      <div class="swiper-pagination-bullet is-active"><span class="swiper-pagination-counter">1</span></div>
+      <div class="swiper-pagination-bullet"><span class="swiper-pagination-counter">2</span></div>
+      <div class="swiper-pagination-bullet"><span class="swiper-pagination-counter">3</span></div>
+    </div>
   </div>
 
 {% set features = ['Быстрые сроки поставки за счет наличия товара на складе в Санкт-Петербурге.', 'Апробация оборудования для клиентов. Уникальная возможность опробовать прибор в рамках собственной лаборатории.', 'Проведение мастер-классов, вебинаров, семинаров, участие в конференциях и выставках.'] %}
   <div class="section">
-  <div class="features">
-    {% for item in features %}
-    <div class="features__item">
-      <div class="features__item-title">{{ item }}</div>
+    <div class="section-title">Выгоды</div>
+    <div class="features">
+      {% for item in features %}
+      <div class="features__item">
+        <div class="features__item-title">{{ item }}</div>
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
-  </div>
   </div>
 
 {% set about = [{
@@ -158,18 +166,19 @@
   },
 ] %}
   <div class="section">
-  <div class="company">
-    <img class="company__bg company__bg_type_xs" src="src/assets/img/company-mobile.png" alt="" />
-    <img class="company__bg company__bg_type_sm" src="src/assets/img/company.png" alt="" />
-    <div class="company__wrapper">
-      {% for item in about %}
-      <div class="company__item">
-        <div class="company__item-title">{{ item.title }}</div>
-        <div class="company__item-text">{{ item.text }}</div>
+    <div class="section-title">Команада</div>
+    <div class="company">
+      <img class="company__bg company__bg_type_xs" src="src/assets/img/company-mobile.png" alt="" />
+      <img class="company__bg company__bg_type_sm" src="src/assets/img/company.png" alt="" />
+      <div class="company__wrapper">
+        {% for item in about %}
+        <div class="company__item">
+          <div class="company__item-title">{{ item.title }}</div>
+          <div class="company__item-text">{{ item.text }}</div>
+        </div>
+        {% endfor %}
       </div>
-      {% endfor %}
     </div>
-  </div>
   </div>
 
   <div class="section content content_fs_xl content_offset_bottom content_type_blockquote">

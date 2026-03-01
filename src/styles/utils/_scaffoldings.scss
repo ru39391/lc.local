@@ -8,3 +8,7 @@
   @include object-fit();
   pointer-events: none;
 }
+
+.zi-2 {
+  @include zi(2);
+}

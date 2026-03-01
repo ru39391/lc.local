@@ -1,9 +1,17 @@
 @use "../utils/helpers" as *;
 
 .intro {
-  padding-top: 32px;
+  @include before;
 
-  @media #{$breakpoint-up-sm} {
-    padding-top: 64px;
+  &:before {
+    @include pos(150px,-16px);
+    right: -16px;
+    bottom: 0;
+    z-index: 1;
+    background: url(../assets/img/intro-mobile.png) no-repeat top center scroll var(--color-transp);
+
+    @media #{$breakpoint-up-xs} {
+      display: none;
+    }
   }
 }

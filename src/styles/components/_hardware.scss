@@ -5,9 +5,29 @@
   display: grid;
   grid-template-columns: repeat(4,1fr);
   gap: 16px;
+  margin: 0 0 40px;
 
   @media #{$breakpoint-up-md} {
     gap: 20px;
+    margin: 0 0 152px;
+  }
+}
+
+.hardware__item {
+  @extend %d-flex-column;
+  gap: 20px 0;
+}
+
+.hardware__item-media {
+  @extend %d-flex-column;
+  @extend %d-flex-centered;
+  min-height: 80px;
+  padding: 16px;
+  border-radius: 16px;
+  background-color: var(--color-white);
+
+  @media #{$breakpoint-up-md} {
+    min-height: 134px;
   }
 }
 

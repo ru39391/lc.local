@@ -9,14 +9,43 @@
 }
 
 .content {
+  p, li, blockquote {
+    @include fs-lh(var(--font-size-sm),1.3);
+    margin-bottom: 24px;
+
+    @media #{$breakpoint-up-md} {
+      font-size: var(--font-size-body);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  li {
+    margin-bottom: 0;
+    list-style-type: disc;
+    list-style-position: inside;
+  }
+
+  ul, ol {
+    @extend %d-flex-column;
+    gap: 4px 0;
+  }
+
+  blockquote {
+    @media #{$breakpoint-up-md} {
+      @include border(0 0 0 4px,#B4B4B5);
+      padding: 0 0 0 12px;
+    }
+  }
+
   &.content_width_min {
     max-width: 595px;
   }
 
-  &.content_fs_md {
-    p {
-      @include fs-lh(var(--font-size-sm),1.3);
-
+  &.content_fs_lg {
+    p, li, blockquote {
       @media #{$breakpoint-up-md} {
         font-size: var(--font-size-lg);
       }
@@ -24,7 +53,7 @@
   }
 
   &.content_fs_xl {
-    p {
+    p, li, blockquote {
       @include fs-lh(var(--font-size-xl),1.3);
 
       @media #{$breakpoint-up-md} {

@@ -6,6 +6,11 @@
   display: flex;
   position: relative;
   border-radius: 12px;
+  margin-bottom: 32px;
+
+  @media #{$breakpoint-up-sm} {
+    margin-bottom: 64px;
+  }
 
   @media #{$breakpoint-up-md} {
     overflow: hidden;
