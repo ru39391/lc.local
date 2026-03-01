@@ -8,6 +8,14 @@
   @media #{$breakpoint-up-md} {
     gap: 0 20px;
   }
+
+  &.swiper-pagination_type_plain {
+    position: static;
+
+    .swiper-pagination-bullet {
+      opacity: 1;
+    }
+  }
 }
 
 .swiper-pagination-bullet {
@@ -23,7 +31,7 @@
     color: #d9d9dd;
   }
 
-  &.is-active {
+  &.swiper-pagination-bullet-active {
     background-color: #d9d9dd;
 
     @media #{$breakpoint-up-md} {

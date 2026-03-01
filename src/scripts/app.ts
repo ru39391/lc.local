@@ -1,6 +1,7 @@
 import Twig, { Template } from 'twig';
+import { initGridSlides, initSlides } from './modules/slides';
 
-const renderData = (tpl: Template): Node[] => {
+const parseData = (tpl: Template): Node[] => {
   const parser = new DOMParser();
 
   const { body } = parser.parseFromString(
@@ -22,25 +23,29 @@ const fetchTemplate = async (): Promise<Template | undefined> => {
   }
 }
 
-const init = () => {
-  console.log("init");
+const initApp = () => {
+  initGridSlides('.js-grid-slides');
+  initSlides('.js-slides');
 };
 
-const initApp = async () => {
+const renderData = async () => {
   const wrapper = document.querySelector<HTMLDivElement>('#app');
 
   try {
     const tpl = await fetchTemplate();
-    const arr = renderData(tpl as Template);
+    const arr = parseData(tpl as Template);
 
     arr.forEach(item => wrapper?.append(item));
-    init();
+    initApp();
   } catch(err) {
     console.error(err);
   }
 };
 
+const init = () => {
+  import.meta.env.VITE_APP_ENV === 'development' ? renderData() : initApp()
+};
+
 export {
-  init,
-  initApp
+  init
 };

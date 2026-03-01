@@ -1,0 +1,48 @@
+@use "../utils/helpers" as *;
+
+.shadow-holder {
+  &:nth-child(3n+1) {
+    .shadow-item {
+      &:before {
+        left: -54px;
+        transform: translateX(0);
+
+        @media #{$breakpoint-up-md} {
+          left: 146px;
+        }
+      }
+    }
+  }
+
+  &:nth-child(3n+3) {
+    .shadow-item {
+      &:before {
+        left: auto;
+        right: 58px;
+        transform: translateX(0);
+
+        @media #{$breakpoint-up-md} {
+          right: 127px;
+        }
+      }
+    }
+  }
+}
+
+.shadow-item {
+  @include before;
+
+  &:before {
+    @include zi(1);
+    @include wh(1104px);
+    @include pos(172px,50%);
+    filter: blur(50px);
+    border-radius: 50%;
+    transform: translateX(-552px);
+    background: radial-gradient(67.41% 67.41% at 50% 50%, #FC6D00 0%, #FFE693 61.54%);
+
+    @media #{$breakpoint-up-md} {
+      top: 284px;
+    }
+  }
+}

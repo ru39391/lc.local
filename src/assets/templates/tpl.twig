@@ -124,30 +124,40 @@
 ] %}
   <div class="section">
     <div class="section-title">Поставляемые решение</div>
-    <div class="hardware">
-      {% for item in hardware %}
-      <div class="hardware__item">
-        <div class="hardware__item-media"><img class="hardware__item-img" src="src/assets/img/logo.png" alt=""/></div>
-        <div class="hardware__item-title">{{ item }}</div>
+    <div class="swiper js-grid-slides">
+      <div class="hardware swiper-wrapper">
+        {% for item in hardware %}
+        <div class="swiper-slide">
+          <div class="hardware__item">
+            <div class="hardware__item-media"><img class="hardware__item-img" src="src/assets/img/logo.png" alt=""/></div>
+            <div class="hardware__item-title">{{ item }}</div>
+          </div>
+        </div>
+        {% endfor %}
       </div>
-      {% endfor %}
-    </div>
-    <div class="swiper-pagination">
-      <div class="swiper-pagination-bullet is-active"><span class="swiper-pagination-counter">1</span></div>
-      <div class="swiper-pagination-bullet"><span class="swiper-pagination-counter">2</span></div>
-      <div class="swiper-pagination-bullet"><span class="swiper-pagination-counter">3</span></div>
+      <div class="swiper-pagination swiper-pagination_type_plain">
+        <!--
+        <div class="swiper-pagination-bullet is-active"><span class="swiper-pagination-counter">1</span></div>
+        <div class="swiper-pagination-bullet"><span class="swiper-pagination-counter">2</span></div>
+        <div class="swiper-pagination-bullet"><span class="swiper-pagination-counter">3</span></div>
+        -->
+      </div>
     </div>
   </div>
 
 {% set features = ['Быстрые сроки поставки за счет наличия товара на складе в Санкт-Петербурге.', 'Апробация оборудования для клиентов. Уникальная возможность опробовать прибор в рамках собственной лаборатории.', 'Проведение мастер-классов, вебинаров, семинаров, участие в конференциях и выставках.'] %}
   <div class="section">
     <div class="section-title">Выгоды</div>
-    <div class="features">
-      {% for item in features %}
-      <div class="features__item">
-        <div class="features__item-title">{{ item }}</div>
+    <div class="swiper js-slides">
+      <div class="features swiper-wrapper">
+        {% for item in features %}
+        <div class="swiper-slide shadow-holder w-auto">
+          <div class="features__item shadow-item">
+            <div class="features__item-title">{{ item }}</div>
+          </div>
+        </div>
+        {% endfor %}
       </div>
-      {% endfor %}
     </div>
   </div>
 
