@@ -1,10 +1,15 @@
 @use "../utils/helpers" as *;
 
-#app {
-  // TODO: удалить
+%full-height-col {
   @extend %d-flex-column;
   min-height: 100vh;
 }
+
+/*
+#app {
+  @extend %full-height-col;
+}
+*/
 
 html {
   scroll-behavior: smooth;
@@ -17,11 +22,10 @@ html {
 }
 
 body {
-  @extend %d-flex-column;
+  @extend %full-height-col;
   @include fs-lh(var(--font-size-body),1);
   font-family: var(--font-family-body), sans-serif;
   color: var(--color-basic);
-  min-height: 100vh;
   background-color: var(--color-neutral);
 }
 

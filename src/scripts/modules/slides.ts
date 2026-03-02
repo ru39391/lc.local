@@ -1,5 +1,5 @@
 // @ts-ignore
-import Swiper from "swiper"; //, { Autoplay, Navigation }
+import Swiper from "swiper";
 
 const initSlides = (sel: string) => {
   const items = Array.from(document.querySelectorAll(sel));
