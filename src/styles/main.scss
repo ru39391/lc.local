@@ -1,5 +1,5 @@
+
 @use 'base/reset';
-@use 'base/fonts';
 @use 'base/typography';
 @use 'layout/container';
 @use 'layout/section';
@@ -20,3 +20,5 @@
 @use 'components/swiper';
 @use 'components/promo';
 @use 'components/shadow';
+@import 'base/fonts';
+@import 'components/bg';

@@ -5,12 +5,6 @@
   min-height: 100vh;
 }
 
-/*
-#app {
-  @extend %full-height-col;
-}
-*/
-
 html {
   scroll-behavior: smooth;
 }
@@ -31,10 +25,6 @@ body {
 
 .wrapper {
   flex-grow: 1;
-
-  @media #{$breakpoint-up-xs} {
-    background: url(../assets/img/intro.png) no-repeat top center scroll var(--color-transp);
-  }
 }
 
 .container {

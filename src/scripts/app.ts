@@ -44,7 +44,7 @@ const renderData = async () => {
 };
 
 const init = () => {
-  import.meta.env.VITE_APP_ENV === 'development' ? renderData() : initApp()
+  import.meta.env.VITE_APP_ENV === 'development' ? renderData() : initApp();
 };
 
 export {

@@ -1,0 +1,21 @@
+@use "../utils/helpers" as *;
+
+.wrapper {
+  @media #{$breakpoint-up-xs} {
+    background: url('#{$assets}/img/intro.png') no-repeat top center scroll var(--color-transp);
+  }
+}
+
+.intro {
+  &:before {
+    background: url('#{$assets}/img/intro-mobile.png') no-repeat top center scroll var(--color-transp);
+  }
+}
+
+.content {
+  &.content_type_blockquote {
+    &:before {
+      background: url('#{$assets}/img/sign.png') no-repeat 0 0 scroll var(--color-transp);
+    }
+  }
+}

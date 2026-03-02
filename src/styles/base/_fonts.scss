@@ -1,39 +1,39 @@
 @font-face {
   font-family: 'GothamPro';
-  src: url('../../src/assets/fonts/gotham-pro/GothamPro-Light.woff2') format('woff2'),
-       url('../../src/assets/fonts/gotham-pro/GothamPro-Light.woff') format('woff');
+  src: url('#{$assets}/fonts/gotham-pro/GothamPro-Light.woff2') format('woff2'),
+       url('#{$assets}/fonts/gotham-pro/GothamPro-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'GothamPro';
-  src: url('../../src/assets/fonts/gotham-pro/GothamPro-Regular.woff2') format('woff2'),
-       url('../../src/assets/fonts/gotham-pro/GothamPro-Regular.woff') format('woff');
+  src: url('#{$assets}/fonts/gotham-pro/GothamPro-Regular.woff2') format('woff2'),
+       url('#{$assets}/fonts/gotham-pro/GothamPro-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'GothamPro';
-  src: url('../../src/assets/fonts/gotham-pro/GothamPro-Medium.woff2') format('woff2'),
-       url('../../src/assets/fonts/gotham-pro/GothamPro-Medium.woff') format('woff');
+  src: url('#{$assets}/fonts/gotham-pro/GothamPro-Medium.woff2') format('woff2'),
+       url('#{$assets}/fonts/gotham-pro/GothamPro-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'GothamPro';
-  src: url('../../src/assets/fonts/gotham-pro/GothamPro-Bold.woff2') format('woff2'),
-       url('../../src/assets/fonts/gotham-pro/GothamPro-Bold.woff') format('woff');
+  src: url('#{$assets}/fonts/gotham-pro/GothamPro-Bold.woff2') format('woff2'),
+       url('#{$assets}/fonts/gotham-pro/GothamPro-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'GothamPro';
-  src: url('../../src/assets/fonts/gotham-pro/GothamPro-Black.woff2') format('woff2'),
-       url('../../src/assets/fonts/gotham-pro/GothamPro-Black.woff') format('woff');
+  src: url('#{$assets}/fonts/gotham-pro/GothamPro-Black.woff2') format('woff2'),
+       url('#{$assets}/fonts/gotham-pro/GothamPro-Black.woff') format('woff');
   font-weight: 900;
   font-style: normal;
 }
