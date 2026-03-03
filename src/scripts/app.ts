@@ -2,6 +2,7 @@
 import Twig, { Template } from 'twig';
 import { initSlides } from './modules/slides';
 import GridSlides from './modules/grid-slides';
+import Pagenav from './modules/pagenav';
 import Tabs from './modules/tabs';
 import Toggler from './modules/toggler';
 
@@ -35,6 +36,12 @@ const initApp = () => {
     wrapperSel: '.js-grid-wrapper',
     itemSel: '.js-grid-item',
     slideClass: 'hardware-grid swiper-slide',
+  });
+  new Pagenav({
+    secCaptionSel: '.js-section-title',
+    navSel: '.js-page-nav',
+    navBtnSel: '.js-pagenav-btn',
+    sectionSel: '.section',
   });
   new Tabs({
     tabsWrapperSel: '.js-tabs',

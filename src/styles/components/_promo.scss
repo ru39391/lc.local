@@ -17,7 +17,7 @@
 }
 
 .promo__nav-btn {
-  color: #9a9a9a;
+  color: var(--color-grey);
   transition: all .3s ease;
 
   &.is-active {
