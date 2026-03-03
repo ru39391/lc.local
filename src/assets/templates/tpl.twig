@@ -74,6 +74,7 @@
       </div>
 
       <div class="section section_type_col zi-2">
+        <div class="section-title js-section-title">Команада</div>
         <div class="content content_fs_xl">
           <p>Нами охвачен весь цикл оснащения лаборатории: от подбора оборудования, его производства, пусконаладки и обучения сотрудников заказчика, до постгарантийного обслуживания.</p>
         </div>
@@ -83,18 +84,21 @@
       </div>
     </section>
 
+{% set promo = [
+  'Поставка оборудования',
+  'Программное обеспечение',
+  'Лаборатория и учебный центр',
+  'Сервис и технический контроль'
+] %}
   <div class="section">
-  <div class="promo">
+  <div class="promo js-tabs">
     <div class="promo__nav">
-      <button class="promo__nav-btn is-active" type="button">Производство</button>
-      <button class="promo__nav-btn" type="button">Поставка оборудования</button>
-      <button class="promo__nav-btn" type="button">Программное обеспечение</button>
-      <button class="promo__nav-btn" type="button">Лаборатория и учебный центр</button>
-      <button class="promo__nav-btn" type="button">Сервис и технический контроль</button>
+      <button class="promo__nav-btn js-tabs-link is-active" type="button" data-pane="promo-tab-0">Производство</button>
+      {% for item in promo %}<button class="promo__nav-btn js-tabs-link" type="button" data-pane="promo-tab-{{ loop.index }}">{{ item }}</button>{% endfor %}
     </div>
-    <div class="promo__panel"><div class="promo__panel-title">Поставка оборудования</div></div>
+    <div class="promo__panel"><div class="promo__panel-title js-tab-caption"></div></div>
     <div class="promo__list">
-      <div class="promo__list-item is-active">
+      <div class="promo__list-item js-tabs-pane is-active" data-id="promo-tab-0">
         <div class="promo__list-title">Производство</div>
         <div class="promo__list-picture"><img class="promo__list-img" src="src/assets/img/company.png" alt="" /></div>
         <div class="promo__list-content content">
@@ -108,6 +112,13 @@
           </ul>
         </div>
       </div>
+      {% for item in promo %}
+        <div class="promo__list-item js-tabs-pane" data-id="promo-tab-{{ loop.index }}">
+            <div class="promo__list-title">{{ item }}</div>
+            <div class="promo__list-picture"></div>
+            <div class="promo__list-content content"><p>{{ item }}</p></div>
+        </div>
+      {% endfor %}
     </div>
   </div>
   </div>
@@ -133,7 +144,7 @@
   'Посудомоечные машины',
 ] %}
   <div class="section">
-    <div class="section-title">Поставляемые решение</div>
+    <div class="section-title js-section-title">Поставляемые решение</div>
     <div class="swiper js-grid-slides">
       {% for item in hardware %}
         <div class="hardware-item js-grid-item">
@@ -155,7 +166,7 @@
 
 {% set features = ['Быстрые сроки поставки за счет наличия товара на складе в Санкт-Петербурге.', 'Апробация оборудования для клиентов. Уникальная возможность опробовать прибор в рамках собственной лаборатории.', 'Проведение мастер-классов, вебинаров, семинаров, участие в конференциях и выставках.'] %}
   <div class="section">
-    <div class="section-title">Выгоды</div>
+    <div class="section-title js-section-title">Выгоды</div>
     <div class="swiper js-slides">
       <div class="features swiper-wrapper">
         {% for item in features %}
@@ -184,7 +195,7 @@
   },
 ] %}
   <div class="section">
-    <div class="section-title">Команада</div>
+    <div class="section-title js-section-title">Команада</div>
     <div class="company">
       <img class="company__bg company__bg_type_xs" src="src/assets/img/company-mobile.png" alt="" />
       <img class="company__bg company__bg_type_sm" src="src/assets/img/company.png" alt="" />
@@ -201,6 +212,13 @@
 
   <div class="section content content_fs_xl content_offset_bottom content_type_blockquote">
     <p>Мы продаем вам не приборы — мы продаем решения ваших задач, включающие в себя процессы от подбора необходимого оборудования и постановки (переноса) методики — до последнего дня эксплуатации каждого прибора с сопровождением последующей его продажи или утилизации.</p>
+  </div>
+
+  <div class="pagenav js-page-nav">
+    <button class="pagenav__btn js-pagenav-btn" type="button" data-title="Ключевые направления" data-hidden="1" data-section="0">Ключевые направления</button>
+    <button class="pagenav__btn js-pagenav-btn" type="button" data-title="Поставляемые решения" data-hidden="" data-section="1">Поставляемые решения</button>
+    <button class="pagenav__btn js-pagenav-btn" type="button" data-title="Выгоды" data-hidden="" data-section="2">Выгоды</button>
+    <button class="pagenav__btn js-pagenav-btn" type="button" data-title="Команда" data-hidden="" data-section="3">Команда</button>
   </div>
 </div>
 </div>

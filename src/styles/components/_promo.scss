@@ -18,6 +18,7 @@
 
 .promo__nav-btn {
   color: #9a9a9a;
+  transition: all .3s ease;
 
   &.is-active {
     color: var(--color-basic);
@@ -31,11 +32,14 @@
 }
 
 .promo__list-item {
-  @extend %d-flex-column;
+  animation: show .5s;
+  flex-direction: column;
+  display: none;
   gap: 24px 0;
   padding: 16px 16px 22px;
   border-radius: 16px;
   background-color: var(--color-white);
+  transition: all .3s ease;
 
   &.is-active {
     @include zi(4);
@@ -47,13 +51,20 @@
   }
 
   @media #{$breakpoint-up-md} {
-    display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-areas:
       "title title"
       "content picture";
     gap: 50px 40px;
     padding: 32px 42px 42px;
+  }
+
+  &.is-active {
+    display: flex;
+
+    @media #{$breakpoint-up-md} {
+      display: grid;
+    }
   }
 }
 
@@ -146,5 +157,21 @@
     font-weight: var(--fw-medium);
     display: block;
     opacity: .3;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateY(75px);
+  }
+
+  50% {
+    opacity: .5;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

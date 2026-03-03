@@ -2,6 +2,7 @@
 import Twig, { Template } from 'twig';
 import { initSlides } from './modules/slides';
 import GridSlides from './modules/grid-slides';
+import Tabs from './modules/tabs';
 import Toggler from './modules/toggler';
 
 const parseData = (tpl: Template): Node[] => {
@@ -34,6 +35,18 @@ const initApp = () => {
     wrapperSel: '.js-grid-wrapper',
     itemSel: '.js-grid-item',
     slideClass: 'hardware-grid swiper-slide',
+  });
+  new Tabs({
+    tabsWrapperSel: '.js-tabs',
+    tabLinkSel: '.js-tabs-link',
+    tabPaneSel: '.js-tabs-pane',
+    handleCaption: (value) => {
+      const caption = document.querySelector('.js-tab-caption');
+
+      if(!caption) return;
+
+      caption.textContent = value;
+    }
   });
   new Toggler({
     itemSel: '.js-nav',

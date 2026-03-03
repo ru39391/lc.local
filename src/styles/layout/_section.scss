@@ -25,4 +25,8 @@
   @media #{$breakpoint-up-md} {
     display: none;
   }
+
+  &.is-hidden {
+    display: none;
+  }
 }
