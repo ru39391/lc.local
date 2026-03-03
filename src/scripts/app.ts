@@ -1,7 +1,8 @@
 // @ts-ignore
 import Twig, { Template } from 'twig';
-import GridSlides from './modules/grid-slides';
 import { initSlides } from './modules/slides';
+import GridSlides from './modules/grid-slides';
+import Toggler from './modules/toggler';
 
 const parseData = (tpl: Template): Node[] => {
   const parser = new DOMParser();
@@ -33,6 +34,16 @@ const initApp = () => {
     wrapperSel: '.js-grid-wrapper',
     itemSel: '.js-grid-item',
     slideClass: 'hardware-grid swiper-slide',
+  });
+  new Toggler({
+    itemSel: '.js-nav',
+    btnSel: '.js-nav-btn',
+    classMod: 'is-active'
+  });
+  new Toggler({
+    itemSel: '.js-search',
+    btnSel: '.js-search-btn',
+    classMod: 'is-active'
   });
 };
 
