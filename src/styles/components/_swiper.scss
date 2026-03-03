@@ -1,7 +1,6 @@
 @use "../utils/helpers" as *;
 
 .swiper-pagination {
-  // TODO: удалить
   @extend %d-flex-centered;
   gap: 0 8px;
 
@@ -14,6 +13,7 @@
 
     .swiper-pagination-bullet {
       opacity: 1;
+      margin: 0;
     }
   }
 }

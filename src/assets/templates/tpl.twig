@@ -121,21 +121,29 @@
   'Поляриметры, рефрактометры, автоматические татраторы, анализаторы температур плавления, анализаторы белка по Кьельдалю, экстракторы жира по методу Сокслета',
   'Роторные испарители, системы для концентрирования и твердофазной экстракции, системы термического нагрева, рециркуляционные системы охлаждения',
   'Посудомоечные машины',
+
+  'Жидкостные хроматографы собственной сборки компании Лабконцепт',
+  'УФ-спектрометры, ИК-Фурье спектрометры, атомно-абсорбционные спектрометры, пламенные фотометры, ТОС-анализаторы, титраторы, мультиметры, электронные дозаторы и т.д.',
+  'Газовый хроматорграфы, газовые и жидкостные хромато-масс-спектрометры, масс-спектрометры с индуктивно связанной плазмой, эмиссионный спектрометр с индуктивно связанной плазмой, микроволновые печи для разложения проб, БИК-анализаторы, автоматические концентраторы',
+  'Лабораторные весы, анализаторы влажности, система очистки кислот, обеспыленное лабораторное рабочее место, система очистки посуды пропариванием, устройство для защиты аналитического оборудования от внештатных ситуаций SMMS',
+  'Ионные хромографы',
+  'Поляриметры, рефрактометры, автоматические татраторы, анализаторы температур плавления, анализаторы белка по Кьельдалю, экстракторы жира по методу Сокслета',
+  'Роторные испарители, системы для концентрирования и твердофазной экстракции, системы термического нагрева, рециркуляционные системы охлаждения',
+  'Посудомоечные машины',
+  'Посудомоечные машины',
 ] %}
   <div class="section">
     <div class="section-title">Поставляемые решение</div>
     <div class="swiper js-grid-slides">
-      <div class="hardware swiper-wrapper">
-        {% for item in hardware %}
-        <div class="swiper-slide">
-          <div class="hardware__item">
-            <div class="hardware__item-media"><img class="hardware__item-img" src="src/assets/img/logo.png" alt=""/></div>
-            <div class="hardware__item-title">{{ item }}</div>
-          </div>
+      {% for item in hardware %}
+        <div class="hardware-item js-grid-item">
+          <div class="hardware-item__media"><img class="hardware-item__img" src="src/assets/img/logo.png" alt=""/></div>
+          <div class="hardware-item__title">{{ loop.index }} {{ item }}</div>
         </div>
-        {% endfor %}
-      </div>
-      <div class="swiper-pagination swiper-pagination_type_plain">
+      {% endfor %}
+      <div class="hardware swiper-wrapper js-grid-wrapper"></div>
+
+      <div class="swiper-pagination swiper-pagination_type_plain js-slides-pagination">
         <!--
         <div class="swiper-pagination-bullet is-active"><span class="swiper-pagination-counter">1</span></div>
         <div class="swiper-pagination-bullet"><span class="swiper-pagination-counter">2</span></div>

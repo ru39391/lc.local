@@ -1,6 +1,7 @@
 // @ts-ignore
 import Twig, { Template } from 'twig';
-import { initGridSlides, initSlides } from './modules/slides';
+import GridSlides from './modules/grid-slides';
+import { initSlides } from './modules/slides';
 
 const parseData = (tpl: Template): Node[] => {
   const parser = new DOMParser();
@@ -25,8 +26,14 @@ const fetchTemplate = async (): Promise<Template | undefined> => {
 }
 
 const initApp = () => {
-  initGridSlides('.js-grid-slides');
   initSlides('.js-slides');
+
+  new GridSlides({
+    parentSel: '.js-grid-slides',
+    wrapperSel: '.js-grid-wrapper',
+    itemSel: '.js-grid-item',
+    slideClass: 'hardware-grid swiper-slide',
+  });
 };
 
 const renderData = async () => {
